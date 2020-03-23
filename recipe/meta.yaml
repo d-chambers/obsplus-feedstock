@@ -1,6 +1,6 @@
 {% set name = "obsplus" %}
-{% set version = "0.0.6" %}
-{% set sha256 = "40374fe113e03ed41b807395fda6b5a513d9f4578da384d2de08cc0ec11fd4b5" %}
+{% set version = "0.1.0" %}
+{% set sha256 = "9d3d2fe7e8ce243103790cd49d3421ff200fc2e12394e99d11b792f02ef40a38" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -25,7 +25,7 @@ requirements:
   run:
     - python >=3.6
     - numpy >=1.13.0
-    - obspy >=1.1.0
+    - obspy >=1.2.1
     - pandas >=0.24.0
     - progressbar2
     - scipy
@@ -38,10 +38,10 @@ test:
 
 about:
   home: https://github.com/niosh-mining/obsplus
-  license: LGPL-3.0
+  license: LGPL-3.0-or-later
   license_family: LGPL
   license_file: LICENSE.txt
-  summary: 'An Pandas-Centric ObsPy Expansion Pack'
+  summary: An Pandas-Centric ObsPy Expansion Pack
   description: |
     ObsPlus is a utility package for ObsPy.
   doc_url: https://github.com/niosh-mining/obsplus
