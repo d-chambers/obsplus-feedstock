@@ -1,6 +1,6 @@
 {% set name = "obsplus" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "54eb6619cfaa497740b88aca957284bf4fcc9efcd8bb320f7309be9aaa00ba8e" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "628840aad6210bc8575be316b994698d736d50f1e5cc5aec7559ca810a5e27f4" %}
 
 package:
   name: {{ name|lower }}
@@ -31,6 +31,8 @@ requirements:
     - scipy
     - setuptools
     - pytables
+    - pydantic
+    - typing_extensions
 
 test:
   imports:
