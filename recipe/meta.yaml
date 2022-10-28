@@ -1,6 +1,6 @@
 {% set name = "obsplus" %}
-{% set version = "0.2.2" %}
-{% set sha256 = "47bf1b7d912909ec9f9563fb94c334365af81a94f12123c9c56b899209449ade" %}
+{% set version = "0.2.4" %}
+{% set sha256 = "86cee5b1475f1586f067012340f7e2e48d81416576be5cb7ece2c9152292163a" %}
 
 package:
   name: {{ name|lower }}
