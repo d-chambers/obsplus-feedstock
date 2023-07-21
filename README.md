@@ -1,11 +1,11 @@
-About obsplus
-=============
+About obsplus-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/obsplus-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/niosh-mining/obsplus
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/obsplus-feedstock/blob/main/LICENSE.txt)
 
 Summary: An Pandas-Centric ObsPy Expansion Pack
 

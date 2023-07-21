@@ -1,6 +1,6 @@
 {% set name = "obsplus" %}
-{% set version = "0.2.4" %}
-{% set sha256 = "86cee5b1475f1586f067012340f7e2e48d81416576be5cb7ece2c9152292163a" %}
+{% set version = "0.2.5" %}
+{% set sha256 = "b6a6c6ce552aca9597ba5666cf9649aec2eede6264c7bcc4febafda2f274a6d5" %}
 
 package:
   name: {{ name|lower }}
@@ -30,8 +30,8 @@ requirements:
     - progressbar2
     - scipy
     - setuptools
+    - pydantic >=1.9.0,<2.0.0
     - pytables
-    - pydantic >=1.8.2
     - typing_extensions
 
 test:
