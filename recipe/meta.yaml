@@ -12,18 +12,18 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
+  number: 1
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - pip
   host:
-    - python >=3.6
     - pip
+    - python >=3.9
+    - setuptools >=45
+    - setuptools_scm >=3.4
+    - toml
   run:
-    - python >=3.6
+    - python >=3.8
     - numpy >=1.13.0
     - obspy >=1.2.1
     - pandas >=1.0
@@ -33,10 +33,16 @@ requirements:
     - pydantic >=1.9.0,<2.0.0
     - pytables
     - typing_extensions
+    - packaging
 
 test:
   imports:
     - obsplus
+  commands:
+    - pip check
+    - python -c "import obsplus; ver = obsplus.__version__; assert ver != '0.0.0'"
+  requires:
+    - pip
 
 about:
   home: https://github.com/niosh-mining/obsplus
