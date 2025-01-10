@@ -1,5 +1,6 @@
 {% set name = "obsplus" %}
 {% set version = "0.3.1" %}
+{% set obsplus_python_min = "3.10" %}
 {% set sha256 = "bbd8864cf4e0ff9353214c05b0a20fd27e32741e26060c3eeb14003a11797a08" %}
 
 package:
@@ -18,12 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python {{ obsplus_python_min }}
     - setuptools >=45
     - setuptools_scm >=3.4
     - toml
   run:
-    - python >={{ python_min }}
+    - python >={{ obsplus_python_min }}
     - numpy >=1.13.0
     - obspy >=1.2.1
     - pandas >=1.0
@@ -43,7 +44,7 @@ test:
     - python -c "import obsplus; ver = obsplus.__version__; assert ver != '0.0.0'"
   requires:
     - pip
-    - python {{ python_min }}
+    - python {{ obsplus_python_min }}
 
 about:
   home: https://github.com/niosh-mining/obsplus
